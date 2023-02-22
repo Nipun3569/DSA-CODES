@@ -1,0 +1,38 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+		int a[50],size,pos;
+	
+	cout<<"enter size of array"<<endl;
+	
+	cin>>size;
+	
+	if(size>50){
+		cout<<"overflow condition"<<endl;
+	}
+	else{
+	
+	cout<<"enter elements of array "<<endl;
+	
+	for(int i=0;i<size;i++){
+		cin>>a[i];
+	}
+	cout<<"enter the position where you want to delete the data"<<endl;
+	cin>>pos;
+	
+	if(pos<0||pos>size){
+		cout<<"invalid position"<<endl;
+	}
+	
+	else{//now we are deleting
+		for(int i=pos-1;i<size-1;i++){
+			a[i]=a[i+1];
+		}
+		size--;
+		for(int i=0;i<size;i++){
+			cout<<a[i]<<endl;
+		}
+	}
+}}
