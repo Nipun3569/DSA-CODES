@@ -1,0 +1,42 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+		int a[50],size,num,pos;
+	
+	cout<<"enter size of array"<<endl;
+	
+	cin>>size;
+	
+	if(size>50){
+		cout<<"overflow condition"<<endl;
+	}
+	else{
+	
+	cout<<"enter elements of array "<<endl;
+	
+	for(int i=0;i<size;i++){
+		cin>>a[i];
+	}
+	cout<<"enter number which u want to insert "<<endl;
+	cin>>num;
+	
+	cout<<"enter position where u want to insert"<<endl;
+	cin>>pos;
+	
+	for(int i=size-1;i>=pos-1;i--){
+		a[i+1]=a[i];
+	}
+	
+	//now we will insert the data
+	
+	a[pos-1]=num;
+	
+	size++;
+	cout<<"your array with inserted element is "<<endl;
+	for(int i=0;i<size;i++){
+		cout<<a[i]<<endl;
+	}
+	
+}}
